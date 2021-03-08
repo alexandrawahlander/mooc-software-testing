@@ -21,6 +21,7 @@ public class CaesarShiftCipher {
                 currentChar = (char) (currentChar + 26);
             }
             sb.append((char) (currentChar + shift));
+           // sb.append((char) (currentChar + shift));
         }
 
         return sb.toString();
