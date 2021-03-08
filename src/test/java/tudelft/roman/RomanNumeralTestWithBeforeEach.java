@@ -11,12 +11,13 @@ public class RomanNumeralTestWithBeforeEach {
     @BeforeEach
     public void initialize() {
         this.roman = new RomanNumeral();
+        System.out.print("Denna körs före varje test\n");
     }
 
     @Test
     public void singleNumber() {
-        int result = roman.convert("I");
-        Assertions.assertEquals(1, result);
+        int result = roman.convert("V");
+        Assertions.assertEquals(5, result);
     }
 
     @Test
@@ -36,4 +37,10 @@ public class RomanNumeralTestWithBeforeEach {
         int result = roman.convert("XLIV");
         Assertions.assertEquals(44, result);
     }
+
+ //   @Test
+   // public void invalidRomanNumeral() {
+ //       int result = roman.convert("C");
+  //      Assertions.assertEquals(?, result);
+   // }
 }
